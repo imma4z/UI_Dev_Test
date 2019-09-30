@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Form</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
+    
 </head>
 <body>
-
+    <div class="form-container">
+        <form class="form" id="myForm" onSubmit="return doSubmit();">
+            <div class="input-field">
+                <label for="name">Name:</label> 
+                <input type="text" value="" name="name">
+            </div>
+            <div class="input-field">  
+                <label for="name">Surname:</label>
+                <input type="text" value="" name="surname">
+            </div>
+            <div class="input-email">
+                <label for="name">email:</label>
+                <input type="email" id="email" value="" name="email"><br>
+            </div>
+            <div class="input-phone">
+                <label for="name">phone:</label>
+                <input type="text" id="phone" value="" name="phone">
+            </div>
+            <div class="input-password">
+                <label for="name">password:</label>
+                <input type="password" id="password" value="" name="password"><br>
+            </div>
+            <input type="submit" id="submit" value="submit">
+        </form>
+    </div>
 </body>
 </html>
