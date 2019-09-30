@@ -5,7 +5,6 @@ $(document).ready(function(){
         if (regex.test(str)) {
             return true;
         }
-    
         e.preventDefault();
         return false;
     });
@@ -37,10 +36,10 @@ $(document).ready(function(){
     var elements = document.getElementById("myForm").elements;
     let emptyFields = false;
     for (var i = 0, element; element = elements[i++];) {
-        if (element.value === "")   
+        if (element.value === "" || $(element.nextElementSibling).length)   
             emptyFields = true;
     }
-    emptyFields ? alert('Please fill all the fields') : alert('Data submitted successfully');
+    emptyFields ? alert('Some fields are missing or Invalid') : alert('Data submitted successfully');
       return false;
   }
 
